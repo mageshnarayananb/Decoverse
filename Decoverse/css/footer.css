@@ -1,0 +1,103 @@
+/* General Styling */
+.footer {
+	background-color: #6b4f3b;
+	color: white;
+	padding: 40px;
+	text-align: left;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.footer h2 {
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+
+/* Let's Design Together Section */
+.footer-left {
+	width: 35%;
+}
+
+.footer-left h2 {
+	font-size: 28px;
+	transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.footer-left h2:hover {
+	color: #ffd700;
+	text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+}
+
+/* Footer Links */
+.footer-links {
+	width: 60%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer-links ul {
+	list-style: none;
+}
+
+.footer-links li {
+	margin-bottom: 8px;
+}
+
+.footer-links a {
+	text-decoration: none;
+	color: white;
+	font-size: 16px;
+	transition: color 0.3s ease-in-out;
+	position: relative;
+}
+
+.footer-links a:hover {
+	color: #ffd700;
+}
+
+/* Underline Animation */
+.footer-links a::after {
+	content: '';
+	display: block;
+	width: 0%;
+	height: 2px;
+	background-color: #ffd700;
+	transition: width 0.3s ease-in-out;
+}
+
+.footer-links a:hover::after {
+	width: 100%;
+}
+
+/* Social Media Icons */
+.social-icons {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+.social-icons a {
+	text-decoration: none;
+	margin: 0 10px;
+	color: white;
+	font-size: 24px;
+	transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+	transform: scale(1.2);
+	color: #ffd700;
+}
+
+/* Copyright Section */
+.footer-bottom {
+	text-align: center;
+	margin-top: 10px;
+	font-size: 18px;
+	opacity: 0.8;
+	padding: 0;
+}
