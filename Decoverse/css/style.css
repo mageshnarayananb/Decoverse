@@ -571,11 +571,7 @@ a:focus {
 	cursor: pointer;
 }
 
-.concept_section .box .img-box:hover .search-box {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-}
+
 
 .concept_section .box .detail-box {
 	margin-top: 25px;
@@ -584,6 +580,31 @@ a:focus {
 .concept_section .box .detail-box h5 {
 	text-transform: uppercase;
 	font-weight: bold;
+}
+.video-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.concept_section .box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  height: 100%;
+}
+
+.concept_section .img-box img,
+.concept_section .img-box video {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  height: 260px;
+}
+
+.concept_section .detail-box {
+  margin-top: 20px;
 }
 
 .modal-dialog {
