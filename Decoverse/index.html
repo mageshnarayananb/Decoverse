@@ -45,23 +45,57 @@
 
 <body>
   <div class="hero_area">
-    <!-- header section strats -->
+    <!-- Full Page Carousel Background -->
+    <div class="fullpage-carousel" id="heroCarousel">
+      <div class="carousel-slide active" style="background-image: url('images/i1.jpg')"></div>
+      <div class="carousel-slide" style="background-image: url('images/i2.jpg')"></div>
+      <div class="carousel-slide" style="background-image: url('images/i3.jpg')"></div>
+      <div class="carousel-slide" style="background-image: url('images/i4.jpg')"></div>
+      <div class="carousel-slide" style="background-image: url('images/i5.jpg')"></div>
+      <div class="carousel-slide" style="background-image: url('images/i6.jpg')"></div>
+      <div class="carousel-slide" style="background-image: url('images/i7.jpg')"></div>
+      <div class="carousel-slide" style="background-image: url('images/i8.jpg')"></div>
+      <div class="carousel-slide" style="background-image: url('images/i9.jpg')"></div>
+      <div class="carousel-slide" style="background-image: url('images/i10.jpg')"></div>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <button class="carousel-nav prev" onclick="prevSlide()">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <button class="carousel-nav next" onclick="nextSlide()">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+
+    <!-- Carousel Indicators -->
+    <div class="carousel-indicators">
+      <button class="carousel-indicator active" onclick="goToSlide(0)"></button>
+      <button class="carousel-indicator" onclick="goToSlide(1)"></button>
+      <button class="carousel-indicator" onclick="goToSlide(2)"></button>
+      <button class="carousel-indicator" onclick="goToSlide(3)"></button>
+      <button class="carousel-indicator" onclick="goToSlide(4)"></button>
+      <button class="carousel-indicator" onclick="goToSlide(5)"></button>
+      <button class="carousel-indicator" onclick="goToSlide(6)"></button>
+      <button class="carousel-indicator" onclick="goToSlide(7)"></button>
+      <button class="carousel-indicator" onclick="goToSlide(8)"></button>
+      <button class="carousel-indicator" onclick="goToSlide(9)"></button>
+    </div>
+
+    <!-- Header Section -->
     <header class="header_section">
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container">
           <a class="navbar-brand" href="index.html">
-            <img src="images/logo2.png" width="60px" height="60px" alt="" />
-            <span>
-              DECOVERSE
-            </span>
+            <img src="images/logo2.png" alt="Decoverse Logo" />
+            <span>DECOVERSE</span>
           </a>
 
-          <div class="navbar-collapse" id="">
+          <div class="navbar-collapse">
             <div class="custom_menu-btn">
               <button onclick="openNav()">
-                <span class="s-1"> </span>
-                <span class="s-2"> </span>
-                <span class="s-3"> </span>
+                <span class="s-1"></span>
+                <span class="s-2"></span>
+                <span class="s-3"></span>
               </button>
             </div>
             <div id="myNav" class="overlay">
@@ -76,90 +110,33 @@
         </nav>
       </div>
     </header>
-    <!-- end header section -->
-    <!-- slider section -->
-    <section class=" slider_section position-relative">
-      <div class="number-box">
-        <div class="num-box">
-          <!-- <h6>01</h6> -->
-        </div>
-        <div class="num-box">
-          <!-- <h6>01</h6> -->
-        </div>
-      </div>
+
+    <!-- Static Content Section -->
+    <section class="slider_section">
       <div class="container">
         <div class="row">
           <div class="col-lg-7 col-md-10">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <div class="detail-box">
-                    <h2>
-                      Transforming Spaces <br />
-                      into Timeless Elegance
-                    </h2>
-                    <p>
-                      Where luxury meets simplicity. We design interiors that <br> inspire, comfort, and define sophistication.
-                    </p>
-                    <div>
-                      <a href="contact.html">
-                        Contact us
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="detail-box">
-                    <h2>
-                      Designing Elegance,<br>
-                       Crafting Luxury.
-                    </h2>
-                    <p>
-                      Interiors that redefine sophistication. Experience the art <br>
-                      of minimalism and timeless beauty.
-                    </p>
-                    <div>
-                      <a href="">
-                        Contact us
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="detail-box">
-                    <h2>
-                      A New Perspective on
-                      <br>Luxury Interiors.
-                    </h2>
-                    <p>
-                      Where design meets functionality,<br> and every space tells a story of elegance.
-                    </p>
-                    <div>
-                      <a href="contactus">
-                        Contact us
-                      </a>
-                    </div>
-                  </div>
-                </div>
+            <div class="detail-box">
+              <h2 margintop="-200px">
+                Transforming Spaces<br />
+                into Timeless Elegance
+              </h2>
+              <p>
+                Where luxury meets simplicity. We design interiors that<br> 
+                inspire, comfort, and define sophistication.
+              </p>
+              <div>
+                <a href="contact.html">Contact us</a>
               </div>
-              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="sr-only">Next</span>
-              </a>
             </div>
-
           </div>
         </div>
       </div>
-    </section>
-
     <!-- end slider section -->
   </div>
 
   <!-- service section -->
-  <section class="service_section layout_padding">
+  <section class="service_section layout_padding" id="services">
     <div class="container">
       <div class="heading_container">
         <h2>
@@ -247,7 +224,7 @@
   </section>
   <!-- end service section -->
 <!-- product section -->
- <section class="product_section layout_padding">
+ <section class="product_section layout_padding" id="products">
     <div class="container">
       <div class="heading_container">
         <h2>
@@ -310,7 +287,7 @@ Use the contact form below to place your order. Simply mention the product name,
 
   <!-- end product section -->
   <!-- about section -->
-  <section class="about_section layout_padding">
+  <section class="about_section layout_padding" id="about">
   <div class="container-fluid">
     <div class="row align-items-center justify-content-center">
       <div class="col-lg-5 col-md-6">
@@ -342,7 +319,7 @@ Whether you’re a vendor without a digital outlet or a customer looking for aut
   <!-- end about section -->
 
   <!-- concept section -->
-  <section class="concept_section layout_padding">
+  <section class="concept_section layout_padding" id="concepts">
   <div class="container">
     <div class="heading_container">
       <h2>OUR CONCEPT</h2>
@@ -433,7 +410,7 @@ Whether you’re a vendor without a digital outlet or a customer looking for aut
 
   <!-- who section -->
 
-  <section class="who_section layout_padding">
+  <section class="who_section layout_padding" id="aboutus">
     <div class="container">
       <h2>
         who we are ?
@@ -476,7 +453,7 @@ Whether you’re a vendor without a digital outlet or a customer looking for aut
       <div class="layout_padding2-top">
 
         <div class="kry-carousel-wrapper">
-          <button class="kry-carousel-nav kry-prev">&#10094;</button>
+          
         
           <div class="kry-carousel" id="kry-carousel">
             <div class="kry-carousel-track" id="kry-carousel-track">
@@ -495,7 +472,7 @@ Whether you’re a vendor without a digital outlet or a customer looking for aut
             </div>
           </div>
         
-          <button class="kry-carousel-nav kry-next">&#10095;</button>
+          
         </div>
         
 
@@ -668,28 +645,28 @@ Whether you’re a vendor without a digital outlet or a customer looking for aut
     <div class="footer-links">
       <ul>
         <h3>LET US HELP YOU</h3>
-        <li><a href="#">Customer Support</a></li>
-        <li><a href="#">Shipping & Delivery</a></li>
-        <li><a href="#">Returns & Exchanges</a></li>
-        <li><a href="#">FAQs</a></li>
+        <li><a href="#contactus">Customer Support</a></li>
+        <li><a href="#contactus">Shipping & Delivery</a></li>
+        <li><a href="#contactus">Returns & Exchanges</a></li>
+        <li><a href="#contactus">FAQs</a></li>
       </ul>
 
       <ul>
         <h3>INFORMATION</h3>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Careers</a></li>
-        <li><a href="#">Sell on Shop</a></li>
-        <li><a href="#">Press & News</a></li>
-        <li><a href="#">Competitions</a></li>
-        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#aboutus">About Us</a></li>
+        <li><a href="#contactus">Careers</a></li>
+        <li><a href="#contactus">Sell on Shop</a></li>
+        <li><a href="#contactus">Press & News</a></li>
+        <li><a href="#contactus">Competitions</a></li>
+        <li><a href="#contactus">Terms & Conditions</a></li>
       </ul>
 
       <ul>
         <h3>OUR DESIGN</h3>
-        <li><a href="#">Project Gallery</a></li>
-        <li><a href="#">Interior Concepts</a></li>
-        <li><a href="#">Modern Spaces</a></li>
-        <li><a href="#">Home Décor Trends</a></li>
+        <li><a href="#projects">Project Gallery</a></li>
+        <li><a href="#concepts">Interior Concepts</a></li>
+        <li><a href="#projects">Modern Spaces</a></li>
+        <li><a href="#projects">Home Decor Trends</a></li>
       </ul>
     </div>
     <div>
@@ -697,7 +674,7 @@ Whether you’re a vendor without a digital outlet or a customer looking for aut
         <a href="https://www.instagram.com/decoverse.design/" target="_blank"
           ><i class="fab fa-instagram"></i
         ></a>
-        <a href="https://www.linkedin.com/" target="_blank"
+        <a href="https://www.linkedin.com/in/decoverse-design-16b157358/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"
           ><i class="fab fa-linkedin"></i
         ></a>
         <a href="mailto:decoverse.design@gmail.com"><i class="fas fa-envelope"></i></a>
@@ -721,6 +698,87 @@ Whether you’re a vendor without a digital outlet or a customer looking for aut
 <script type="text/javascript" src="js/custom.js"></script>
 <script type="text/javascript" src="js/contactForm.js"></script>
 <script src="app.js"></script>
+<script>
+    // Carousel functionality
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const indicators = document.querySelectorAll('.carousel-indicator');
+    const totalSlides = slides.length;
+    let autoSlideInterval;
+
+    // Function to show specific slide
+    function showSlide(index) {
+      // Remove active class from all slides and indicators
+      slides.forEach(slide => slide.classList.remove('active'));
+      indicators.forEach(indicator => indicator.classList.remove('active'));
+      
+      // Add active class to current slide and indicator
+      slides[index].classList.add('active');
+      indicators[index].classList.add('active');
+      
+      currentSlide = index;
+    }
+
+    // Function to go to next slide
+    function nextSlide() {
+      const nextIndex = (currentSlide + 1) % totalSlides;
+      showSlide(nextIndex);
+    }
+
+    // Function to go to previous slide
+    function prevSlide() {
+      const prevIndex = (currentSlide - 1 + totalSlides) % totalSlides;
+      showSlide(prevIndex);
+    }
+
+    // Function to go to specific slide (for indicators)
+    function goToSlide(index) {
+      showSlide(index);
+      resetAutoSlide();
+    }
+
+    // Auto slide functionality
+    function startAutoSlide() {
+      autoSlideInterval = setInterval(nextSlide, 5000);
+    }
+
+    function resetAutoSlide() {
+      clearInterval(autoSlideInterval);
+      startAutoSlide();
+    }
+
+    // Hamburger menu functionality (preserving existing functionality)
+    function openNav() {
+      document.getElementById('myNav')?.classList.toggle('menu_width');
+      document.querySelector('.custom_menu-btn')?.classList.toggle('menu_btn-style');
+    }
+
+    // Initialize carousel when page loads
+    document.addEventListener('DOMContentLoaded', function() {
+      startAutoSlide();
+      
+      // Pause auto-slide on hover
+      const heroArea = document.querySelector('.hero_area');
+      heroArea.addEventListener('mouseenter', () => {
+        clearInterval(autoSlideInterval);
+      });
+      
+      heroArea.addEventListener('mouseleave', () => {
+        startAutoSlide();
+      });
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowLeft') {
+        prevSlide();
+        resetAutoSlide();
+      } else if (e.key === 'ArrowRight') {
+        nextSlide();
+        resetAutoSlide();
+      }
+    });
+  </script>
 </body>
 
 </html>
