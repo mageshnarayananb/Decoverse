@@ -1,8 +1,36 @@
 // ========= Navigation Menu Toggle ========= //
 function openNav() {
-	document.getElementById('myNav')?.classList.toggle('menu_width');
-	document.querySelector('.custom_menu-btn')?.classList.toggle('menu_btn-style');
+	const overlay = document.getElementById('myNav');
+	const menuBtn = document.querySelector('.custom_menu-btn');
+	const body = document.body;
+	if (overlay && menuBtn && body) {
+		overlay.classList.toggle('menu_width');
+		menuBtn.classList.toggle('menu_btn-style');
+		if (overlay.classList.contains('menu_width')) {
+			body.classList.add('menu-open');
+		} else {
+			body.classList.remove('menu-open');
+		}
+	}
 }
+
+// Close overlay when a link is clicked
+window.addEventListener('DOMContentLoaded', function() {
+	const overlayLinks = document.querySelectorAll('#myNav .overlay-content a');
+	const overlay = document.getElementById('myNav');
+	const menuBtn = document.querySelector('.custom_menu-btn');
+	const body = document.body;
+	overlayLinks.forEach(link => {
+		link.addEventListener('click', function() {
+			overlay.classList.remove('menu_width');
+			menuBtn.classList.remove('menu_btn-style');
+			body.classList.remove('menu-open');
+		});
+	});
+	// Ensure overlay is closed on every page load
+	if (overlay) overlay.classList.remove('menu_width');
+	if (body) body.classList.remove('menu-open');
+});
 
 // ========= Image Modal Logic ========= //
 $(document).ready(function () {
