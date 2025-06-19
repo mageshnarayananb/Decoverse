@@ -97,4 +97,3 @@ setInterval(() => {
 	krySlide(1);
 }, 3000);
 
-
